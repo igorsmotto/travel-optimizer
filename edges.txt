@@ -1,0 +1,32 @@
+# Edges: format is "From -> To | £Cost | Duration | TransportType | Type | DepartureDateTime | ArrivalDateTime"
+# Direction: '->' for unidirectional, '<->' for bidirectional
+# Type: 'fixed' for specific times, 'flexible' for recurring services (e.g., "05:00-11:00/15m")
+# DateTime format: "YYYY-MM-DD HH:MM" for flights, "HH:MM" for local transport
+
+Home <-> Tottemham Hale | £2.10 | 23m | Tube | flexible | 05:34-23:59/5m | 
+Home <-> Finsbury Park | £1.75| 10m | Bus | flexible | 05:48-23:59/12m | 
+
+# To the Airport
+Tottemham Hale -> STN | £14 | 40m | Train | flexible | 04:52-23:37/30m | 
+STN -> Tottemham Hale | £12 | 40m | Train | flexible | 06:00-23:48/30m | 
+Finsbury Park <-> LGW | £10.50 | 1h45m | Train | flexible | 00:11-23:00/60m | 
+
+# Flights
+STN -> CIA | £40 | 2h30m | Flight | fixed | 2024-06-15 14:00 | 2024-06-15 16:30
+STN -> CIA | £55 | 2h30m | Flight | fixed | 2024-06-15 17:45 | 2024-06-15 20:15
+STN -> CIA | £32 | 2h30m | Flight | fixed | 2024-06-15 22:10 | 2024-06-16 00:40
+CIA -> STN | £40 | 2h30m | Flight | fixed | 2024-06-17 17:00 | 2024-06-17 19:30
+STN -> PSA | £45 | 2h30m | Flight | fixed | 2024-06-15 20:00 | 2024-06-15 22:30
+PSA -> STN | £45 | 2h30m | Flight | fixed | 2024-06-18 23:00 | 2024-06-19 01:30
+FLR -> LGW | £35 | 2h | Flight | fixed | 2024-06-18 06:20 | 2024-06-18 08:20
+LGW -> FLR | £35 | 2h | Flight | fixed | 2024-06-16 08:45 | 2024-06-16 10:45
+
+Rome <-> Florence | £20 | 1h30m | Train | flexible | 06:00-20:00/30m | 
+
+# To the Airport
+CIA <-> Rome | £3 | 40m | Train | flexible | 06:00-22:00/15m | 
+FCO <-> Rome | £14.50 | 40m | Train | flexible | 06:00-22:00/20m | 
+
+Florence <-> FLR | £3 | 20m | Tram | flexible | 05:00-23:00/10m | 
+Florence <-> PSA | £3 | 20m | Tram | flexible | 05:00-23:00/10m | 
+Florence <-> PSA | £4 | 1h | Tram | flexible | 06:00-22:00/30m | 
